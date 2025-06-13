@@ -9,8 +9,9 @@ function cancel(){
 // Typewriter Effect
 const texts = [
     "SEO CONTENT WRITER",
-    "VIRTUAL ASSISTANT",
-    "VIDEO EDITOR"
+    "VIRTUAL ASSISTANT - Beginner",
+    "VIDEO EDITOR - Beginner",
+    "SOCIAL MEDIA MANAGER - Beginner"
 ]
 let speed  =100;
 const textElements = document.querySelector(".typewriter-text");
@@ -37,4 +38,4 @@ function eraseText(){
         setTimeout(typeWriter, 500)
     }
 }
-window.onload = typeWriter
+window.onload = typeWriter 
