@@ -9,9 +9,8 @@ function cancel(){
 // Typewriter Effect
 const texts = [
     "SEO CONTENT WRITER",
-    "VIRTUAL ASSISTANT - Beginner",
-    "VIDEO EDITOR - Beginner",
-    "SOCIAL MEDIA MANAGER - Beginner"
+    "WordPress Content Publisher",
+    "Aspiring Video Editor",
 ]
 let speed  =100;
 const textElements = document.querySelector(".typewriter-text");
