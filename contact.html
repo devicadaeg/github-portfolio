@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contact-form");
+        
+            form.addEventListener("submit", function(event) {
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+                let valid = true;
+        
+                // Simple validation
+                if (name === "") {
+                    alert("Please enter your name.");
+                    valid = false;
+                } else if (email === "" || !email.includes("@")) {
+                    alert("Please enter a valid email.");
+                    valid = false;
+                } else if (message.length < 10) {
+                    alert("Message should be at least 10 characters long.");
+                    valid = false;
+                }
+        
+                // Stop form submission if invalid
+                if (!valid) {
+                    event.preventDefault();
+                }
+            });
+        });
+        </script>
+        
+</body>
+</html>
